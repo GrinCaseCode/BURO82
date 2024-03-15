@@ -11,6 +11,7 @@
     }
     .logo-main {
         transform: scale(0.8);
+        transform-origin: 50% 50%;
     }
     .btn-menu {
         top: 28px;
@@ -131,7 +132,7 @@
         transform: scale(0.6);
     }
     .front-page {
-        padding-bottom: 20px;
+        padding-bottom: 60px;
     }
     .contacts-footer p {
         margin-bottom: 12px;
@@ -156,7 +157,7 @@
     #map {
         height: 350px;
     }
-    .btn-menu span {
+    .wrapper_page .btn-menu span {
         display: none;
     }
 }
