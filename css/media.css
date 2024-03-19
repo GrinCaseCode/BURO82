@@ -338,7 +338,7 @@
         padding-top: 30px;
     }
     .swiper-card {
-        margin-right: -15px;
+        margin-right: calc((100vw - 680px) / 2* -1);
         margin-bottom: 40px;
     }
     .item-project {
@@ -421,6 +421,9 @@
         font-size: 23px;
         margin-top: 11px;
     }
+    .fancybox-slide:not(.fancybox-slide--html) {
+        padding: 20px;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -457,6 +460,21 @@
     .checkbox {
         justify-content: center;
         margin-top: 20px;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .swiper-card {
+        margin-right: -15px;
+    }
+    .item-feature {
+        padding-right: 0;
+    }
+    .swiper-card .title-small br {
+        display: none;
+    }
+    .item-feature span br {
+        display: none;
     }
 }
 
