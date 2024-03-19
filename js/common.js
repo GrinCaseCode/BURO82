@@ -17,6 +17,36 @@ $(document).ready(function() {
 
 	});
 
+	$('.swiper-card').each(function(){
+		var swiper = new Swiper(this, {
+			slidesPerView: "auto",
+			slidesPerGroup: 1,
+			speed: 1500,
+			freeMode: true,
+			navigation: {
+				nextEl: (this, ".swiper-button-next"),
+				prevEl: (this, ".swiper-button-prev")
+			},
+			});
+			
+	});
+
+	$(".item-project").bind( "mousemove", function( e ) {
+		$(this).find(".item-project__image").slideDown(300);
+		var pos = $(this).offset();
+
+    	$(this).find(".item-project__image").css({
+			left:  e.pageX + 50,
+       		top:   e.pageY
+		});
+
+		
+		});
+
+		$(".item-project").on( "mouseleave", function() {
+			$(this).find(".item-project__image").slideUp(300);
+		});
+
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
