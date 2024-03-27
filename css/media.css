@@ -455,7 +455,8 @@
         visibility: visible;
     }
     .swiper-card {
-        margin-left: 15px;
+        margin-bottom: 30px !important;
+        margin-left: 15px !important;
         transform: none !important;
     }
     .footer__right {
