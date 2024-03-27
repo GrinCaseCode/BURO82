@@ -11,6 +11,7 @@ $(document).ready(function() {
       }, 4000); 
 
 
+
 	//кнопка sandwich
 	$(".btn-menu").click(function() {
 		$(this).toggleClass("active");
@@ -21,6 +22,7 @@ $(document).ready(function() {
 		var swiper = new Swiper(this, {
 			slidesPerView: "auto",
 			slidesPerGroup: 1,
+			loop: true,
 			speed: 1500,
 			freeMode: true,
 			navigation: {
@@ -30,6 +32,31 @@ $(document).ready(function() {
 			});
 			
 	});
+
+	$(".swiper-card").click(function() {
+
+		$(this).addClass("active");
+		$(this).addClass("scaled");
+
+	});
+
+
+	$(window).on('DOMMouseScroll mousewheel', function(event){
+		$(".swiper-card").removeClass("scaled");
+	});
+
+	{
+		if ($(window).width() > 992) { 
+			$(".swiper-card").click(function() {
+				var thisSwiper = $(this);
+				$('html, body').animate({
+					scrollTop: thisSwiper.offset().top - 200
+				}, 1000);
+			});
+		
+		}
+	  }
+
 
 	$(".item-project").bind( "mousemove", function( e ) {
 		$(this).find(".item-project__image").slideDown(300);
